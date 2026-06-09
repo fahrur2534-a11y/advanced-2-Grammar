@@ -1,127 +1,328 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About My Family - Writing Exercise</title>
+
+<title>Advanced Grammar Task - Connectors</title>
 
 <style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    background:#f4f6f9;
+  font-family:Arial, sans-serif;
+  background:#f4f7fb;
+  padding:20px;
+  color:#333;
+  line-height:1.6;
 }
 
 .container{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,.1);
+  max-width:1100px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-h1,h2{
-    color:#2c3e50;
+h1{
+  text-align:center;
+  color:#2c3e50;
+  margin-bottom:10px;
 }
 
-textarea{
-    width:100%;
-    min-height:120px;
-    padding:10px;
-    margin-top:10px;
+.subtitle{
+  text-align:center;
+  color:#666;
+  margin-bottom:20px;
 }
 
-input{
-    padding:8px;
-    margin:5px;
+.instructions{
+  background:#eef6ff;
+  border-left:5px solid #3498db;
+  padding:15px;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+.question{
+  background:#fafafa;
+  padding:15px;
+  margin-bottom:12px;
+  border-radius:8px;
+}
+
+.question p{
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+label{
+  display:block;
+  margin:6px 0;
+  cursor:pointer;
 }
 
 button{
-    background:#3498db;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:5px;
-    cursor:pointer;
+  width:100%;
+  padding:15px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:20px;
 }
 
 button:hover{
-    background:#2980b9;
+  background:#2980b9;
+}
+
+#result{
+  margin-top:25px;
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
 }
 
 .correct{
-    color:green;
-    font-weight:bold;
+  color:green;
 }
 
 .wrong{
-    color:red;
-    font-weight:bold;
+  color:red;
 }
+
+.answer-key{
+  margin-top:40px;
+  background:#f9f9f9;
+  padding:20px;
+  border-radius:10px;
+}
+
+.answer-key h2{
+  margin-bottom:15px;
+}
+
+.answer-key ol{
+  margin-left:20px;
+}
+
+.answer-key li{
+  margin-bottom:6px;
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
 
-<hr>
+<h1>ADVANCED GRAMMAR TASK</h1>
 
-<h2>Part A: Fill in the blanks</h2>
+<div class="subtitle">
+Fill in the Blank - Connectors
+</div>
 
-<p>1. Kelly lives in
-<input id="q1"></p>
+<div class="instructions">
+<strong>Instruction:</strong><br>
+Choose the correct connector from the options given in brackets.
+</div>
 
-<p>2. Kelly's mother's name is
-<input id="q2"></p>
+<form id="quizForm">
 
-<p>3. Kelly's father works in a
-<input id="q3"></p>
+<div class="question">
+<p>1. The experiment was successful, ______ the results were not fully expected.</p>
+<label><input type="radio" name="q1" value="A"> however</label>
+<label><input type="radio" name="q1" value="B"> therefore</label>
+<label><input type="radio" name="q1" value="C"> because</label>
+</div>
 
-<p>4. Kelly's sister loves listening to
-<input id="q4"></p>
+<div class="question">
+<p>2. Many students use AI tools, ______ they must use them responsibly.</p>
+<label><input type="radio" name="q2" value="A"> so</label>
+<label><input type="radio" name="q2" value="B"> but</label>
+<label><input type="radio" name="q2" value="C"> because</label>
+</div>
 
-<p>5. Brandy is a pet
-<input id="q5"></p>
+<div class="question">
+<p>3. The number of plastic waste is increasing; ______, environmental pollution is getting worse.</p>
+<label><input type="radio" name="q3" value="A"> therefore</label>
+<label><input type="radio" name="q3" value="B"> although</label>
+<label><input type="radio" name="q3" value="C"> unless</label>
+</div>
 
-<button onclick="checkAnswers()">Check Answers</button>
+<div class="question">
+<p>4. She studied very hard, ______ she passed the exam with high scores.</p>
+<label><input type="radio" name="q4" value="A"> because</label>
+<label><input type="radio" name="q4" value="B"> so</label>
+<label><input type="radio" name="q4" value="C"> but</label>
+</div>
 
-<p id="result"></p>
+<div class="question">
+<p>5. Online learning is flexible, ______ it also requires strong self-discipline.</p>
+<label><input type="radio" name="q5" value="A"> and</label>
+<label><input type="radio" name="q5" value="B"> but</label>
+<label><input type="radio" name="q5" value="C"> or</label>
+</div>
 
-<hr>
+<div class="question">
+<p>6. The weather was very bad, ______ the school was closed.</p>
+<label><input type="radio" name="q6" value="A"> so</label>
+<label><input type="radio" name="q6" value="B"> because</label>
+<label><input type="radio" name="q6" value="C"> although</label>
+</div>
 
-<h2>Part B: Write About Your Family</h2>
+<div class="question">
+<p>7. ______ many students like social media, it can affect their focus on studies.</p>
+<label><input type="radio" name="q7" value="A"> Although</label>
+<label><input type="radio" name="q7" value="B"> Because</label>
+<label><input type="radio" name="q7" value="C"> So</label>
+</div>
 
-<p>Write 5–8 sentences about your family.</p>
+<div class="question">
+<p>8. He did not study for the test; ______, he failed it.</p>
+<label><input type="radio" name="q8" value="A"> however</label>
+<label><input type="radio" name="q8" value="B"> therefore</label>
+<label><input type="radio" name="q8" value="C"> although</label>
+</div>
 
-<textarea placeholder="My name is..."></textarea>
+<div class="question">
+<p>9. The teacher explained the lesson clearly, ______ some students still did not understand.</p>
+<label><input type="radio" name="q9" value="A"> but</label>
+<label><input type="radio" name="q9" value="B"> so</label>
+<label><input type="radio" name="q9" value="C"> because</label>
+</div>
+
+<div class="question">
+<p>10. ______ technology is developing rapidly, education is also changing.</p>
+<label><input type="radio" name="q10" value="A"> Because</label>
+<label><input type="radio" name="q10" value="B"> Although</label>
+<label><input type="radio" name="q10" value="C"> As a result</label>
+</div>
+
+<div class="question">
+<p>11. The project was difficult; ______, the students finished it on time.</p>
+<label><input type="radio" name="q11" value="A"> however</label>
+<label><input type="radio" name="q11" value="B"> because</label>
+<label><input type="radio" name="q11" value="C"> so</label>
+</div>
+
+<div class="question">
+<p>12. She forgot her homework, ______ she had to do it again at school.</p>
+<label><input type="radio" name="q12" value="A"> so</label>
+<label><input type="radio" name="q12" value="B"> but</label>
+<label><input type="radio" name="q12" value="C"> although</label>
+</div>
+
+<div class="question">
+<p>13. Students should read more books, ______ reading improves vocabulary.</p>
+<label><input type="radio" name="q13" value="A"> because</label>
+<label><input type="radio" name="q13" value="B"> but</label>
+<label><input type="radio" name="q13" value="C"> although</label>
+</div>
+
+<div class="question">
+<p>14. The internet is useful, ______ it can also be distracting.</p>
+<label><input type="radio" name="q14" value="A"> and</label>
+<label><input type="radio" name="q14" value="B"> but</label>
+<label><input type="radio" name="q14" value="C"> so</label>
+</div>
+
+<div class="question">
+<p>15. He did not attend the meeting ______ he was sick.</p>
+<label><input type="radio" name="q15" value="A"> because</label>
+<label><input type="radio" name="q15" value="B"> so</label>
+<label><input type="radio" name="q15" value="C"> although</label>
+</div>
+
+<button type="button" onclick="checkAnswers()">Submit Answers</button>
+
+</form>
+
+<div id="result"></div>
+
+<div class="answer-key">
+
+<h2>Answer Key</h2>
+<ol>
+<li>A</li>
+<li>B</li>
+<li>A</li>
+<li>B</li>
+<li>B</li>
+<li>A</li>
+<li>A</li>
+<li>B</li>
+<li>A</li>
+<li>C</li>
+<li>A</li>
+<li>A</li>
+<li>A</li>
+<li>B</li>
+<li>A</li>
+</ol>
+
+</div>
 
 </div>
 
 <script>
+
 function checkAnswers(){
 
-let score = 0;
-
 const answers = {
-q1:"california",
-q2:"carmen",
-q3:"bank",
-q4:"music",
-q5:"dog"
+q1:"A",
+q2:"B",
+q3:"A",
+q4:"B",
+q5:"B",
+q6:"A",
+q7:"A",
+q8:"B",
+q9:"A",
+q10:"C",
+q11:"A",
+q12:"A",
+q13:"A",
+q14:"B",
+q15:"A"
 };
 
-for(let id in answers){
-let user = document.getElementById(id).value.trim().toLowerCase();
+let score = 0;
+let total = 15;
 
-if(user === answers[id]){
+for(let key in answers){
+
+const selected = document.querySelector(`input[name="${key}"]:checked`);
+
+if(selected && selected.value === answers[key]){
 score++;
 }
+
 }
 
-document.getElementById("result").innerHTML =
-"You got " + score + " out of 5 correct!";
+const result = document.getElementById("result");
+const percent = Math.round((score/total)*100);
+
+result.innerHTML = `Score: ${score} / ${total} (${percent}%)`;
+
+if(score >= 12){
+result.className = "correct";
+}else{
+result.className = "wrong";
 }
+
+}
+
 </script>
 
 </body>
